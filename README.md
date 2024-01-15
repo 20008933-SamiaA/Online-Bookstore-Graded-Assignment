@@ -1,2 +1,24 @@
-# Online-Bookstore-Graded-Assignment
-Online bookstore enabling customers to browse, view, and purchase books. Admin functionalities include managing books, staff details, and categories through creation, reading, updating, and deletion.
+# Online-Bookstore-GA-Project
+## Words&Pages: Your Bookstore at Your Fingertips
+Words&Pages is a dynamic web application designed for book enthusiasts and administrators. This platform seamlessly connects customers to various books while empowering administrators with essential management functionalities.
+
+#### Features:
+- **Customer Experience:** Browse through a collection of books, discover books of different genres, and easily make book purchases. (*Paypal Sandbox was used)
+
+- **Administrator Control:** Admins can create, read, update, and delete books, ensuring the catalogue stays up-to-date and relevant.
+
+
+
+#### Technologies used:
+- Java Springboot (Used Eclipse IDE)
+- HTML, CSS, Javascript
+- Paypal Sandbox
+- MYSQL (Used MYSQL Workbench)
+
+
+#### Code Locations:
+- main Branch: Main Codes for web application
+- orpBranch: SQL Scripts 
+
+Note: This application is in active development and requires more improvements and fixes to be added
+
