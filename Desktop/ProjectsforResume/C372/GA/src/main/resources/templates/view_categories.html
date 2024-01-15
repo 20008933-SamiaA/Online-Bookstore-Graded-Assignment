@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Words&Pages - View Categories</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+	rel="stylesheet" type="text/css" />
+<script src="/bootstrap/css/bootstrap.js"></script>
+<style>
+.container {
+	padding-top: 30px;
+}
+
+.center {
+	text-align: center;
+	width: 100%;
+}
+
+th{
+
+border-color: Black !important;
+
+}
+
+td{
+
+border-color: Black !important;
+
+}
+</style>
+</head>
+<body style="background-color:#E7DECC;">
+	<div class="container-fluid">
+		<div th:replace="fragments/header3"></div></div>
+
+<div class="container-xxl">
+		
+			<div class="h1">
+				View Categories </div> <a href="/categories/add" class="btn btn-primary">Add
+					Category</a>
+			
+		<br></br>
+			<table class="table table-bordered border " border=1
+				width=100%>
+				<thead class=center>
+					<tr>
+						<!--<th>ID</th>-->
+						<th>Category</th>
+						<th>Update</th>
+						<th>Remove</th>
+
+
+
+					</tr>
+
+				</thead>
+				<tbody>
+
+					 <tr th:each="category : ${listCategories}">
+						
+							<!--  <td th:text="${category.id}"></td>-->
+							<td><a style=color:#00008B th:href=@{/books/category/{id}(id=${category.id})}><span
+							       th:text="${category.name}"></span></a></td>
+
+							<td><a style=color:#00008B th:href="@{/categories/edit/{id}(id=${category.id})}"><i
+									class="fas fa-edit center"></i></a></td>
+							<td><a style=color:#00008B
+								th:href="@{/categories/delete/{id}(id=${category.id})}"><i
+									class="fas fa-trash-alt center"></i></a></td>
+						</tr>
+					
+				</tbody>
+			</table>
+		</div>
+	
+</body>
+</html>
