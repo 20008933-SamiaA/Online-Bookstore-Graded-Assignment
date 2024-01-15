@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Words & Pages - Home</title>
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+<script src="/bootstrap/js/bootstrap.js"></script>
+
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<style>
+.rImg {
+	width: 99%;
+	margin-top: -8px;
+	margin-left: 10px;
+	padding-right: 7px;
+	padding-bottom: 20px;
+}
+
+h2 {
+	color: #000;
+	font-size: 26px;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	margin: 30px 0 80px;
+}
+
+h2 b {
+	color: rgb(188, 154, 101);
+}
+
+
+
+.carousel {
+	margin: 50px auto;
+	padding: 0 70px;
+}
+
+.carousel .carousel-item {
+	min-height: 330px;
+	text-align: center;
+	overflow: hidden;
+}
+
+.carousel .carousel-item .img-box {
+	height: 190px;
+	width: 100%;
+	position: relative;
+}
+
+.carousel .carousel-item img {
+	max-width: 100%;
+	max-height: 100%;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+
+.carousel .carousel-item h4 {
+	font-size: 15px;
+	margin: 10px 0;
+	color: White;
+}
+
+.carousel .carousel-item .btn {
+	color: White;
+	border-radius: 0;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: none;
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	margin-top: 5px;
+	line-height: 16px;
+}
+
+.carousel .carousel-item .btn:hover, .carousel .carousel-item .btn:focus
+	{
+	color: #000;
+	background: #fff;
+	border-color: #d4af37;
+	box-shadow: none;
+	border-width: 2px;
+}
+
+.carousel .carousel-item .btn i {
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 5px;
+}
+
+.carousel .thumb-wrapper {
+	text-align: center;
+}
+
+.carousel .thumb-content {
+	padding: 15px;
+}
+
+/*The i tag is used to adding the arrow Icons*/
+.carousel-control-prev i, .carousel-control-next i {
+	font-size: 30px;
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	margin: -90px 0 0 0;
+	left: 0;
+	right: 0;
+	color: White;
+	text-shadow: none;
+	font-weight: bold;
+}
+
+.carousel-control-prev i {
+	margin-left: -3px;
+}
+
+.carousel-control-next i {
+	margin-right: -3px;
+}
+
+.carousel .item-price {
+	font-size: 15px;
+	padding: 2px 0;
+}
+
+.carousel .item-price span {
+	color: #ead61c;
+	font-size: 110%;
+}
+
+.carousel .carousel-indicators {
+	bottom: -50px;
+}
+
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	margin: 4px;
+	border-radius: 50%;
+	border-color: transparent;
+	border: none;
+}
+
+.carousel-indicators li {
+	background: White;
+}
+
+.carousel-indicators li.active {
+	background: #d8bb61;
+}
+
+
+#bg {
+
+padding-bottom: 0px;
+
+}
+
+.container-fluid {
+	padding-top: 0px;
+	padding-right: 0;
+	padding-left: 0;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+img {
+	padding-top: 25px;
+	padding-bottom: 5px;
+	margin-left: 50px;
+	display: block;
+}
+
+.navbar {
+  width: 100%; /* Full width */
+  background-color: #808080;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+} 
+
+.nav-link{
+
+ color:white;
+
+}
+
+.navbar-nav .nav-item.active .nav-link, .navbar-nav .nav-item:hover .nav-link
+	{
+	color: #d7c797;
+}
+
+body{
+
+height:800px;
+
+}
+
+a{
+
+color: White;
+}
+</style>
+</head>
+<body>
+
+
+
+</head>
+<body style="background-color: Black;">
+
+	<header>
+
+
+
+<div id=bg class="container-fluid bg-black">
+		<a class="navbar-brand" href="/"> <img src="/images/logo.png"></a>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+
+				<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+
+						<li class="nav-item"><a class="nav-link" href="/categories">Categories</a></li>
+
+						<li class="nav-item"><a class="nav-link" href="/books">Shop</a></li>
+
+						<li class="nav-item"><a class="nav-link" href="/members">Members</a></li>
+						
+						
+
+						<li class="nav-item"><a class="nav-link" href="/members/add">Register</a></li>
+<a sec:authorize="isAuthenticated()" class="nav-link" href="/cart">Cart</a>
+			</ul>
+			
+			<a sec:authorize="!isAuthenticated()" class="nav-link" href="/login">Login</a>
+			<form sec:authorize="isAuthenticated()" th:action="@{/logout}"
+				method="post" class="">
+				<button class="btn nav-link" style="padding-left:0px;" type=submit>Logout</button>
+			</form>
+  </div>  
+</nav>
+</div>
+<br>
+</header>
+
+
+	<main>
+
+		<div style="background-color: #d8bb61;" class="container-fluid" >
+
+			<div sec:authorize="isAuthenticated()">
+				<h4 class="text-center">
+					<br>Hello <span sec:authentication="principal.username"></span>!
+					<i class="far fa-laugh-beam"></i>
+				</h4>
+
+			</div>
+
+
+
+			<img class=rImg src="images/BG3.PNG" alt="">
+
+		</div>
+
+		<br> <br>
+
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>
+						<b>Best-Sellers</b>
+					</h2>
+					<div id="myCarousel" class="carousel slide" data-ride="carousel"
+						data-interval="6000">
+						<!-- Carousel indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						</ol>
+						<!-- Wrapper for carousel items -->
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<div class="row">
+									<!-- Start -->
+									<!-- 4 items in 1 Slide -->
+									<div class="col-sm-3">
+										<div class="thumb-wrapper">
+											<div class="img-box">
+												<img src="/bks/Bk1.jpg" class="img-fluid" alt="">
+											</div>
+											<div class="thumb-content">
+												<h4>
+												<a href="/books/4">
+													The Spanish Love Deception <br> [Paperback]</a>
+												</h4>
+												<p style="margin-top: -10px" class="item-price">
+													<span>$19.00</span>
+												</p>
+												
+											</div>
+
+										</div>
+									</div>
+									<!-- End -->
+
+									<!-- Start -->
+									<!-- 4 items in 1 Slide -->
+									<div class="col-sm-3">
+										<div class="thumb-wrapper">
+											<div class="img-box">
+												<img src="/bks/Bk2.jpg" class="img-fluid" alt="">
+											</div>
+											<div class="thumb-content">
+												<h4>
+												
+													Verity<br> [Paperback]
+													
+												</h4>
+												<p class="item-price">
+													<span>$23.30</span> <span>[SOLD OUT]</span> 
+												</p>
+												
+											</div>
+
+										</div>
+									</div>
+									<!-- End -->
+									<!-- Start -->
+									<!-- 4 items in 1 Slide -->
+									<div class="col-sm-3">
+										<div class="thumb-wrapper">
+											<div class="img-box">
+												<img src="/bks/Bk3.jpg" class="img-fluid" alt="">
+											</div>
+											<div class="thumb-content">
+												<h4>
+												<a href="/books/2">
+													Milk and Honey<br>[Paperback]</a>
+												</h4>
+												<p class="item-price">
+													<span>$23.50</span>
+												</p>
+												
+											</div>
+
+										</div>
+									</div>
+									<!-- End -->
+									<div class="col-sm-3">
+										<div class="thumb-wrapper">
+											<div class="img-box">
+												<img src="/bks/Bk4.jpg" class="img-fluid" alt="">
+											</div>
+											<div class="thumb-content">
+												<h4>
+												
+													It Ends with Us<br>[Paperback]
+												</h4>
+												<p class="item-price">
+													<span>$18.10</span><span>[SOLD OUT]</span> 
+												</p>
+
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Start -->
+							<div class="carousel-item">
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="thumb-wrapper">
+											<div class="img-box">
+												<img src="/bks/Bk5.jpg" class="img-fluid" alt="">
+											</div>
+											<div class="thumb-content">
+												<h4>
+												
+													The Seven Husbands of<br>Evelyn Hugo<br>[Paperback]
+												</h4>
+												<p style="margin-top: -10px" class="item-price">
+													<span>$20.00</span><span>[SOLD OUT]</span> 
+												</p>
+												
+											</div>
+										</div>
+									</div>
+									<!--End-->
+
+									<!--Start-->
+									<div class="col-sm-3">
+										<div class="thumb-wrapper">
+											<div class="img-box">
+												<img src="/bks/Bk6.jpg" class="img-fluid" alt="">
+											</div>
+											<div class="thumb-content">
+											
+												<h4>
+												
+													The Inheritance Games<br>(The Inheritance Games #1)<br>[HardCover]
+													
+												</h4>
+												<p style="margin-top: -10px" class="item-price">
+													<span>$30.00</span><span>[SOLD OUT]</span> 
+												</p>
+												
+											</div>
+
+										</div>
+									</div>
+									<!--End-->
+									<!--Start-->
+									<div class="col-sm-3">
+										<div class="thumb-wrapper">
+											<div class="img-box">
+												<img src="/bks/Bk7.jpg" class="img-fluid" alt="">
+											</div>
+											<div class="thumb-content">
+												<h4>
+												
+													The Hawthorne Legacy<br>(The Inheritance Games #2)<br>[HardCover]
+													 
+												</h4>
+												<p style="margin-top: -10px" class="item-price">
+													<span>$31.50</span><span>[SOLD OUT]</span> 
+												</p>
+												
+											</div>
+
+										</div>
+									</div>
+									<!--End-->
+
+									<!--Start-->
+									<div class="col-sm-3">
+										<div class="thumb-wrapper">
+											<div class="img-box">
+												<img src="/bks/Bk8.jpg" class="img-fluid" alt="">
+											</div>
+											<div class="thumb-content">
+												<h4>
+												
+													Dune (Dune #1)<br>[Paperback]
+												</h4>
+												<p class="item-price">
+													<span>$19.10</span>
+												</p>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Start -->
+							<div class="carousel-item">
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="thumb-wrapper">
+											<div class="img-box">
+												<img src="/bks/Bk9.jpg" class="img-fluid" alt="">
+											</div>
+											<div class="thumb-content">
+												<h4>
+												<a href="/books/5">
+													Shadow and Bone <br> (The Shadow and Bone #1) <br>
+													[Collecter's Edition]</a>
+												</h4>
+												<p style="margin-top: -10px" class="item-price">
+													<span>$30.56</span>
+												</p>
+
+												
+											</div>
+										</div>
+									</div>
+									<!--End-->
+									<!--Start-->
+									<div class="col-sm-3">
+										<div class="thumb-wrapper">
+											<div class="img-box">
+												<img src="/bks/Bk10.jpg" class="img-fluid" alt="">
+											</div>
+											<div class="thumb-content">
+												<h4>
+												
+													We Hunt the Flame<br>(Sands of Arawiya #1)<br>[Paperback]
+												</h4>
+												<p style="margin-top: -10px" class="item-price">
+													<span>$23.50</span><span>[SOLD OUT]</span> 
+												</p>
+												
+											</div>
+
+										</div>
+									</div>
+									<!--End-->
+									<!--Start-->
+									<div class="col-sm-3">
+										<div class="thumb-wrapper">
+											<div class="img-box">
+												<img src="/bks/Bk11.jpg" class="img-fluid" alt="">
+											</div>
+											<div class="thumb-content">
+											
+												<h4>
+												The Invisible Life of Addie LaRue [HardCover]
+												
+												</h4>
+												<p class="item-price">
+													<span>$33.76</span><span>[SOLD OUT]</span> 
+												</p>
+												
+											</div>
+
+										</div>
+									</div>
+									<!--End-->
+									<!--Start-->
+									<div class="col-sm-3">
+										<div class="thumb-wrapper">
+											<div class="img-box">
+												<img src="/bks/Bk12.jpg" class="img-fluid" alt="">
+											</div>
+											<div class="thumb-content">
+												<h4>
+												<a href="/books/3">
+													The Silent Patient<br>[Paperback]</a>
+												</h4>
+												<p class="item-price">
+													<span>$22.50</span>
+												</p>
+												
+												<!--End-->
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Carousel controls -->
+						<a class="carousel-control-prev" href="#myCarousel"
+							data-slide="prev"> <i class="fa fa-angle-left"></i>
+						</a> <a class="carousel-control-next" href="#myCarousel"
+							data-slide="next"> <i class="fa fa-angle-right"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+
+
+</body>
+</html>
