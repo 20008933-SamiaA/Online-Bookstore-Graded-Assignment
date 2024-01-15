@@ -19,7 +19,7 @@ Words&Pages is a dynamic web application designed for book enthusiasts and admin
 
 #### Code Locations:
 - main Branch: Main Codes for web application
-- orpBranch: SQL Scripts 
+- SQLScripts: SQL Scripts 
 
 #### Note: 
 * This application is in active development and requires more improvements and fixes to be added
